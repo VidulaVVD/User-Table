@@ -1,0 +1,113 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+ 
+  padding: 3px;
+}
+
+.ReactTable {
+  width: 100%;
+  border-spacing: 0;
+  border: 1px solid #ddd;
+  margin-top: 8px;
+}
+
+.ReactTable th,
+.ReactTable td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.ReactTable th {
+  background-color: #f2f2f2;
+}
+
+.ReactTable .rt-tbody {
+  max-height: 500px; 
+  overflow-y: auto;
+}
+
+.ReactTable input {
+  padding: 5px;
+  margin: 5px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+.ReactTable .rt-noData {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+}
+
+.ReactTable .rt-pagination {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.ReactTable .rt-page {
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.ReactTable .rt-page:hover {
+  background-color: #f2f2f2;
+}
+
+.ReactTable .rt-th,
+.ReactTable .rt-td {
+  position: relative;
+}
+
+.ReactTable .rt-th::after,
+.ReactTable .rt-td::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.ReactTable .rt-td::after {
+  border-left: 1px solid #ddd;
+}
+
+.ReactTable .-sort-asc::after {
+  content: '\2191';
+}
+
+.ReactTable .-sort-desc::after {
+  content: '\2193';
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.table-heading {
+  margin: 0;
+  font-size: 20px;
+}
+
+.global-search-input {
+  padding: 5px;
+  font-size: 14px;
+}
